@@ -1,72 +1,81 @@
 body {
-  background: #2d2929;
-  margin: 10px;
-  padding: 10px;
-}
-
-.banner {
-  display: flex;
-  justify-content: center;
-}
-
-.outer1 {
-  display: flex;
-
-
+  background: black;
+  margin: 0;
 }
 
 h1 {
-  color: white;
+  color: black;
   font-style: italic;
   font-family: staatliches;
   font-size: 40px;
-  margin: 10px;
-  padding: 10px;
-
+  text-align: center;
 }
 
-
 p {
-  color: #2d2929;
+  color: black;
   font-style: normal;
   font-family: staatliches;
   font-weight: normal;
-  font-size: 13px;
+  font-size: 20px;
   margin: 10px;
   padding: 0,5px;
 }
 
-.leatest1 {
-  background: #2d2929;
-  margin: 10px;
-  padding: 10px;
-  border: 4px solid white;
-  width: 50%;
-
+.juventuspic {
+align-items: center;
+width: 100%;
 }
 
-.schedule1 {
-  background: #2d2929;
+.nextgame {
+  background: black;
+  text-align: center;
+}
+
+.outer1 {
+  display: flex;
+}
+
+.leatest1 {
+  background: white;
   margin: 10px;
-  padding: 10px;
-  border: 4px solid white;
   width: 50%;
 }
 
 .leatest2 {
-  background: #2d2929;
+  background: white;
   margin: 10px;
   padding: 10px;
-  border: 4px solid white;
+  width: 50%;
 }
 
 .schedule2 {
   background: #2d2929;
   margin: 10px;
   padding: 10px;
-  border: 4px solid white;
+  border: 2px solid white;
   width: 50%;
 }
 
 .outer2 {
   display: flex;
+}
+
+@media (max-width: 768px) {
+  .outer1 {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .leatest1, .nextgame {
+  width: 94%;
+}
+
+@media (max-width: 768px) {
+  .outer2 {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .leatest2, .schedule2 {
+  width: 89%;
+}
