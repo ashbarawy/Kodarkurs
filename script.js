@@ -1,24 +1,61 @@
-let newsArticle = [
-  {
-    title: "Latest News Serie A",
-    subtitle: "first article",
-    image: "pic to article"
-},
-{
-  title: "Latest News Champions Leauge",
-  subtitle: "second article",
-  image: "pic of article"
+// Our variables
+let url = "https://newsapi.org/v2/everything?apiKey=f21c963b4b4742ce93858b0c3deccf01&q=serieA AND (Juventus OR dybala OR ronaldo OR Allergi OR Mattiudi OR Benatia OR Bonucci OR Cancelo OR Madzukic OR Emre Can OR Pjanic OR Doglas Costa OR Chellini OR Szecsny OR Bentacur OR Alex Sandro OR Bernardeschi)&language=en&sortBy=relevancy"
+
+
+// Our main function which handles the news items and adds them to the DOM
+let receivedNews = (newsData) => {
+
+  // newsData is the entire response from the API.
+  // newsData.articles is an array of objects representing each article.
+  // For each article object from the API, we create a new div in HTML.
+  newsData.articles.forEach((article) => {
+
+    // Here we create and add html elements to our html file
+    document.querySelector(".serieA").innerHTML +=
+      `<div class="news">
+        <h2>${article.title}</h2>
+        <h3>${article.description}</h3>
+        <h5>${article.publishedAt}</5h>
+        <img class="newsimage" src="${article.urlToImage}" />
+      </div>`
+
+    })
 }
-]
 
-let leatest1 = document.querySelector(".outer1")
+// Fetch is a built in function in JavaScript, it gets the data from the API and transforms it into JavaScript objects – JSON data.
+// These lines call the API, makes sure we get the response as JSON, and finally passes the result to the function we defined above, receivedNews.
+fetch(url)
+  .then(response => response.json())
+  .then(receivedNews)
 
-newsArticles.forEach((article) => {
-  article.innerHTML += `
-    <div class="article">
-      <h1>${article.title}</h1>
-      <h2>${article.subtitle}</h2>
-      <img src="${article.image}" />
-    </div>
-  `
-})
+
+
+
+
+  // Our variables
+  let urlseriesa = "https://newsapi.org/v2/everything?apiKey=f21c963b4b4742ce93858b0c3deccf01&q=juventus AND champions league AND (dybala OR ronaldo OR Allergi OR Mattiudi OR Benatia OR Bonucci OR Cancelo OR Madzukic OR Emre Can OR Pjanic OR Doglas Costa OR Chellini OR Szecsny OR Bentacur OR Alex Sandro OR Bernardeschi)&language=en&sortBy=relevancy"
+
+  // Our main function which handles the news items and adds them to the DOM
+  let receivedNewsseriesa = (newsData) => {
+
+    // newsData is the entire response from the API.
+    // newsData.articles is an array of objects representing each article.
+    // For each article object from the API, we create a new div in HTML.
+    newsData.articles.forEach((article) => {
+
+      // Here we create and add html elements to our html file
+      document.querySelector(".championsleauge").innerHTML +=
+        `<div class="news">
+          <h2>${article.title}</h2>
+          <h3>${article.description}</h3>
+          <h5>${article.publishedAt}</5h>
+          <img class="newsimage" src="${article.urlToImage}" />
+        </div>`
+      })
+  }
+
+  // Fetch is a built in function in JavaScript, it gets the data from the API and transforms it into JavaScript objects – JSON data.
+  // These lines call the API, makes sure we get the response as JSON, and finally passes the result to the function we defined above, receivedNews.
+  fetch(urlseriesa)
+    .then(response => response.json())
+    .then(receivedNewsseriesa)
