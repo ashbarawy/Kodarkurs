@@ -37,12 +37,11 @@ h3 {
   margin-top: 20px;
   border: solid gold 10px;
   margin: 50px;
-}
-
-.outerbanner h1 {
   font-size: 150px;
   font-style: normal;
+
 }
+
 
 .genväg {
   background-color: white;
@@ -64,6 +63,14 @@ h3 {
   font-size: 50px;
 }
 
+.juveteam {
+  background-color: white;
+  height: 600px;
+  margin-top: 20px;
+  border: solid gold 10px;
+  margin: 50px;
+}
+
 .outer {
   display: flex;
   width: 100%;
@@ -71,6 +78,10 @@ h3 {
 
 .outer h1 {
   text-align: center;
+}
+
+.outerbanner h1 {
+  font-size: 150px;
 }
 
 .kolumn {
@@ -84,7 +95,7 @@ h3 {
   width: 100%;
 }
 
-.juvteam {
+.juveteam {
   display: flex;
   background-color: white;
   height: 600px;
@@ -93,23 +104,16 @@ h3 {
   margin: 50px;
 }
 
-@media (max-width: 768px) {
+.juveteam h1 {
+  color:black;
+}
+
+@media (max-width: 767px) {
   .outer {
   display: block;
 }
 
-@media (max-width: 768px) {
-  .kolumn {
-  margin: 0%;
+@media (max-width: 767px) {
+.outerbanner {
   width: 100%;
-}
-
-@media (max-width: 768px) {
-  .outerbanner {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .outerbanner h1 {
-  font-size: 50px;
 }
